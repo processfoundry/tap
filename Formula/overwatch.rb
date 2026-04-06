@@ -5,21 +5,21 @@
 class Overwatch < Formula
   desc "Self-hosted monitoring server and TUI for operators"
   homepage "https://github.com/processfoundry/overwatch"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.3/overwatch_darwin_amd64.tar.gz"
-      sha256 "c905a0e94cc736fc6a6faf1f31b29d9be4497e196adf0a2ba84e314b898b2e66"
+      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.4/overwatch_darwin_amd64.tar.gz"
+      sha256 "4ca879c84a048a6830a42ac941e5bd943be0a9f5508ccf6617f3dc0528f856f2"
 
       define_method(:install) do
         bin.install "overwatch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.3/overwatch_darwin_arm64.tar.gz"
-      sha256 "ac33582e933ca000d7a6a78f50bf33bdbcf91ff03099c4b5cdabe7fceccdd7de"
+      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.4/overwatch_darwin_arm64.tar.gz"
+      sha256 "5ef227ec1efd7efefaa4ea15a7982bbaf2c83fa855526a21043b9d7a489faa68"
 
       define_method(:install) do
         bin.install "overwatch"
@@ -29,15 +29,15 @@ class Overwatch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.3/overwatch_linux_amd64.tar.gz"
-      sha256 "6ab310f75b9ec1543b587f96cbb1421199716153493dc114ca91737fc9de22d7"
+      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.4/overwatch_linux_amd64.tar.gz"
+      sha256 "e39a480b8e3b52a2da04b86c9f71ba776395d4363451809d28939baa95792e56"
       define_method(:install) do
         bin.install "overwatch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.3/overwatch_linux_arm64.tar.gz"
-      sha256 "97884e0ad104309bcebbab1ecb108449b8ca6046bb80e3ee7fd31270c642b4e8"
+      url "https://github.com/processfoundry/overwatch/releases/download/v0.1.4/overwatch_linux_arm64.tar.gz"
+      sha256 "8d53f516f223456b5f5cc8e0e557e463e37905bdd49b18f3441b958899d1f0c6"
       define_method(:install) do
         bin.install "overwatch"
       end
